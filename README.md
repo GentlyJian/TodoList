@@ -1,19 +1,4 @@
-# todolist
 
-## Project setup
-```
-npm install
-```
-
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
-
-### Compiles and minifies for production
-```
-npm run build
-```
 ### 错误小结
 ``` 
 1、在 updateTask中 不能用for of去改变状态，需要通过for in 获取index 去改变状态 
