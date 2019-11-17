@@ -1,8 +1,8 @@
 <template>
   <div class="taskItem">
-    <input type="checkBox" v-model="isChecked" />
+    <input type="checkbox" v-model="isChecked" />
     <span :class="{finished: isChecked}">{{task.title}}</span>
-    <button class="delete" @click="deleteTask">删除</button>
+    <button class="delete" @click="deleteTask1">删除</button>
   </div>
 </template>
 
@@ -18,15 +18,20 @@ export default {
   props: {
     task: {
       type: Object,
-      default: null
+      default: {}
     }
+  },
+  mounted() {
+      console.log(this.task.isFinished);
+      console.log(this.isChecked);
   },
   methods: {
     ...mapMutations({
       updateTask: "update_task",
       deleteTask: "delete_task"
     }),
-    deleteTask() {
+    deleteTask1() {
+      console.log(this.task.id);
       this.deleteTask({ id: this.task.id });
     }
   },
