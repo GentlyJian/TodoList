@@ -1,28 +1,31 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <task-head></task-head>
+    <task-add></task-add>
+    <task-select></task-select>
+    <task-list></task-list>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import TaskHead from 'components/task/TaskHead'
+import TaskAdd from 'components/task/TaskAdd'
+import TaskSelect from 'components/task/TaskSelect'
+import TaskList from 'components/task/TaskList'
+
 
 export default {
   name: 'app',
   components: {
-    HelloWorld
+    TaskHead,
+    TaskAdd,
+    TaskSelect,
+    TaskList
   }
 }
 </script>
 
-<style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+<style scoped>
+
 </style>
+
